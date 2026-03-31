@@ -1,0 +1,755 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(Assets/Fonts/Montserrat-VariableFont_wght.ttf) format("truetype"),
+        url(Assets/Fonts/Montserrat-Italic-VariableFont_wght.ttf) format("truetype"),
+        url(Assets/Fonts/static/Montserrat-ExtraBold.ttf)
+}
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+strong {
+    font-family: "Montserrat";
+    font-weight: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION */
+.parrent-nav-top {
+    height: 5rem;
+    background-color: #152237;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-size: 0.9375rem;
+    width: 100%;
+    padding: 0 4rem;
+}
+
+.parrent-nav-top img {
+    width: 5.25rem;
+    height: auto;
+}
+
+.gauche-container {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    flex-shrink: 0;
+}
+
+.formation-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #152237;
+    border-radius: 0.625rem;
+    padding: 0.9375rem;
+}
+
+.nav-list .color-connect {
+    background: #FFFFFF;
+}
+
+.nav-list .color-sign {
+    background: linear-gradient(0.25turn, #44DD8A, #15B7E2);
+}
+
+.recherche-top {
+    width: 25rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border-radius: 0.375rem;
+    border: 0.0625rem solid #ffffff;
+    color: white;
+    padding-left: 1.25rem;
+}
+
+.recherche-top::placeholder {
+    color: #FFFFFF;
+}
+
+.conteneur-recherche {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.conteneur-recherche .fa-solid {
+    position: absolute;
+    right: 0.9375rem;
+    color: #FFFFFF;
+}
+
+/* BANNIERE */
+.banniere {
+    background: linear-gradient(to right, rgba(68, 221, 138, 0.8), rgba(21, 183, 226, 0.8)), url("Assets/Img/bg-header.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* CORRIGÉ */
+    min-height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banniere h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #152237;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.banniere p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.esp {
+    margin-top: 2rem;
+    border-radius: 0.375rem;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: white solid 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* FORMATIONS POPULAIRES */
+.LFP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.LFP h2 {
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    color: #152237;
+    align-self: flex-start;
+}
+
+.Cartes-contenaires {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.Carte1,
+.Carte2,
+.Carte3,
+.Carte4 {
+    position: relative;
+    max-width: 300px;
+}
+
+
+.prix1,
+.prix2,
+.prix3,
+.prix4,
+.prix5,
+.prix6,
+.prix7,
+.prix8 {
+    border-radius: 2rem;
+    padding: 0.2rem 0.8rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 8.5rem;
+    font-weight: bold;
+}
+
+.prix1,
+.prix2,
+.prix3,
+.prix4 {
+    border: #152237 solid 2px;
+    background-color: #152237;
+    color: white;
+}
+
+.prix5,
+.prix6,
+.prix7,
+.prix8 {
+    border: white solid 2px;
+    background-color: white;
+    color: #152237;
+}
+
+.Carte1 h4,
+.Carte2 h4,
+.Carte3 h4,
+.Carte4 h4 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #152237;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.Carte1 p,
+.Carte2 p,
+.Carte3 p,
+.Carte4 p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+div[class^="prix"] h3 s {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 0.4rem;
+    opacity: 0.8;
+}
+
+.LFP button {
+    border-radius: 0.375rem;
+    background-color: #152237;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+/* FORMATIONS RECENTES */
+.LFR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #152237;
+    padding: 4rem 2rem;
+}
+
+.LFR h2 {
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: white;
+    margin-bottom: 3rem;
+    align-self: flex-start;
+}
+
+.Cartes-contenaires2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.Carte5,
+.Carte6,
+.Carte7,
+.Carte8 {
+    position: relative;
+    max-width: 300px;
+}
+
+.Carte5 h4,
+.Carte6 h4,
+.Carte7 h4,
+.Carte8 h4 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.Carte5 p,
+.Carte6 p,
+.Carte7 p,
+.Carte8 p {
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.LFR button {
+    border-radius: 0.375rem;
+    background-color: white;
+    color: #152237;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+    margin-left: 45%;
+}
+
+/* AVIS CLIENTS */
+.Avis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.avh2 {
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: #152237;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.Avis section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+}
+
+.Juliette,
+.Camille {
+   color: #152237;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.pp {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.Avis p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* AVANTAGES */
+.Avantages {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* CORRIGÉ */
+    padding: 4rem 2rem;
+    gap: 4rem;
+}
+
+.Avantages section {
+    max-width: 600px;
+}
+
+.Avantages h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.a1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.a1 img {
+    margin-right: 1.5rem;
+    height: 1.875rem;
+    width: 1.875rem;
+}
+
+.Avantages p {
+    font-size: 1.2rem;
+}
+
+.a2 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* CREATION DE FORMATIONS */
+.Creform {
+    background-color: #44DD8A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* CORRIGÉ */
+    padding: 4rem 2rem;
+    gap: 4rem;
+}
+
+.img1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.Creform section {
+    max-width: 600px;
+}
+
+.cvf,
+.cache {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cf1,
+.cf2 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.cf1 img,
+.cf2 img {
+    margin-right: 1.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.cf1 p,
+.cf2 p {
+    font-size: 1.1rem;
+}
+
+/* A PROPOS */
+.Propos {
+    display: flex;
+    width: 100%;
+    /* CORRIGÉ */
+    background-color: #f5f5f5;
+}
+
+.Propos section {
+    flex: 1;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Propos h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #152237;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.pg1,
+.pg2 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    flex: 1;
+    background-color: #152237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NOUS CONTACTER */
+.Contact {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* CORRIGÉ */
+    padding: 4rem 2rem;
+}
+
+.Contact h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.Contact hr {
+    background-color: #44DD8A;
+    border: 1px solid #44DD8A;
+    width: 200px;
+    margin-bottom: 3rem;
+}
+
+.Contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.Contact section {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.Nom,
+.email {
+    flex: 1;
+}
+
+.Nom input,
+.email input {
+    width: 100%;
+    height: 3rem;
+    background-color: #152237;
+    color: white;
+    border: none;
+    padding-left: 1rem;
+    border-radius: 5px;
+}
+
+.message {
+    width: 100%;
+}
+
+.message textarea {
+    width: 100%;
+    height: 12rem;
+    background-color: #152237;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.btn {
+    background-color: #44DD8A;
+    color: #152237;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    margin-top: 2rem;
+}
+
+/* FOOTER */
+.rectangle {
+    width: 100%;
+    height: 1.125rem;
+    background: linear-gradient(to left, #44DD8A, #18a0fb);
+}
+
+.Footer {
+    background-color: #152237;
+    width: 100%;
+    /* CORRIGÉ */
+    padding: 4rem 4rem 2rem 4rem;
+    color: white;
+}
+
+.partie1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.imlogo img {
+    width: 15rem;
+}
+
+.Mls h4,
+.Coo h4 {
+    margin-bottom: 1.5rem;
+}
+
+.MLL,
+.address,
+.sadress2,
+.tel,
+.mail2 {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coin {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Connexion {
+    background-color: white;
+    border-radius: 0.375rem;
+    color: #152237;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Inscription {
+    background: linear-gradient(to right, #44DD8A, #18a0fb);
+    border-radius: 0.375rem;
+    color: #152237;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hr2 {
+    border: solid 1px #44DD8A;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.partie2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Rsx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SN {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* MEDIA QUERIES (Mobiles) */
+@media(max-width: 768px) {
+    .parrent-nav-top {
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .nav-list,
+    .conteneur-recherche {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .banniere h1 {
+        font-size: 2rem;
+    }
+
+    .esp {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .Avis section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Avantages,
+    .Creform,
+    .Propos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .a1,
+    .cf1,
+    .cf2 {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .Contact section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .partie1 {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .Rsx {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .Juliette, .Camille {
+        align-items: center; 
+        text-align: center;  
+        margin-bottom: 3rem; 
+        padding: 0 1rem; 
+    }
+
+    .pp, .Nomavis, .eto {
+        margin-left: 0; 
+        margin-right: 0;
+    }
+    
+}
