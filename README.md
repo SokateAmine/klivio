@@ -2,10 +2,7 @@
 
 Ce projet est une intégration **"pixel-perfect"** (reproduction fidèle) d'une maquette Figma pour la plateforme d'apprentissage en ligne **KLIVIO**, spécialisée dans le développement personnel.
 
-Le projet est divisé en deux approches d'intégration pour démontrer différentes techniques de développement :
-
-1. **Version CSS Classique (Vanilla CSS) :** Située à la racine, elle propose une structure sémantique propre et du style vanilla optimisé et entièrement responsive.
-2. **Version Tailwind CSS :** Située dans le dossier `KlivioTailwinds/`, elle utilise une approche Utility-First moderne.
+Il propose une structure sémantique propre et du style vanilla (HTML5 / CSS3 / Vanilla JS) optimisé et entièrement responsive.
 
 ---
 
@@ -23,15 +20,9 @@ Le projet est divisé en deux approches d'intégration pour démontrer différen
 
 ## 🛠️ Stack Technique
 
-### Version Classique (Vanilla)
-* **HTML5** sémantique.
+* **HTML5** sémantique et accessible.
 * **CSS3** moderne (Flexbox, variables, transitions).
 * **Vanilla JavaScript** pour la gestion de la responsivité du menu burger.
-
-### Version Tailwind
-* **HTML5** sémantique.
-* **Tailwind CSS** (mise en page Grid/Flexbox, responsive natif, configuration de thème).
-* **FontAwesome** pour les icônes.
 
 ---
 
@@ -42,8 +33,6 @@ klivio/
 ├── Assets/              # Images, polices (Montserrat) et logos
 ├── Index.html           # Page d'accueil (Version CSS Classique)
 ├── style.css            # Styles de la version CSS Classique
-├── KlivioTailwinds/     # Version du projet utilisant Tailwind CSS
-├── Readme.mk            # Documentation alternative
 └── README.md            # Documentation principale (ce fichier)
 ```
 
